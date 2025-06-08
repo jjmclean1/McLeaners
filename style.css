@@ -1,0 +1,78 @@
+/* Reset & base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4ede4; /* Soft beige */
+    color: #3c2c24; /* Rich brown for text */
+    line-height: 1.6;
+  }
+  
+  /* Header & Nav */
+  header {
+    background-color: #3c2c24; /* Espresso brown */
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #2caefc; /* Blue accent */
+  }
+  
+  /* Sections */
+  section {
+    padding: 3rem 1.5rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  h2 {
+    color: #3c2c24;
+    margin-bottom: 1rem;
+  }
+  
+  ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #3c2c24;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* Buttons or Callouts (optional) */
+  .button {
+    background-color: #2caefc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  .button:hover {
+    background-color: #1b9cd7;
+  }
