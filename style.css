@@ -89,30 +89,6 @@
     position: relative; /* Needed for absolutely positioned suds */
   }
   
-  .suds {
-    position: absolute;
-    top: 20px; /* Adjust vertical position */
-    width: 50px;
-    height: 50px;
-    background: radial-gradient(circle at 20% 30%, #e0f0ff, #a0d8ff);
-    border-radius: 50%;
-    box-shadow:
-      15px 10px 0 5px #a0d8ff,
-      30px 5px 0 10px #e0f0ff,
-      40px 20px 0 2px #a0d8ff;
-    opacity: 0.6;
-    filter: drop-shadow(0 0 2px #5a9eff);
-    z-index: 1; /* To make sure suds appear above background */
-  }
-  
-  .left-suds {
-    left: 10px; /* Distance from left edge */
-  }
-  
-  .right-suds {
-    right: 10px; /* Distance from right edge */
-    transform: scaleX(-1); /* Mirror horizontally for symmetry */
-  }
   /* Dropdown Styles */
 .dropdown {
     position: relative;
