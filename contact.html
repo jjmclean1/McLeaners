@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - The McLeaners Car Detailing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>The McLeaners Car Detailing</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="https://www.facebook.com/profile.php?id=61576893583908" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://instagram.com/McLeaners" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </nav>
+  </header>
+
+  <section id="contact-form" style="max-width: 600px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>Contact Us</h2>
+    <p>Email Us for Price Quotes and Appointment Scheduling</p>
+
+    <form action="mailto:themcleaners@gmail.com" method="POST" enctype="text/plain">
+      <label for="email">Email*</label><br />
+      <input type="email" id="email" name="email" required placeholder="Your email" style="width:100%; padding:8px; margin-bottom:1rem;" />
+
+      <label for="name">Name</label><br />
+      <input type="text" id="name" name="name" placeholder="Your name" style="width:100%; padding:8px; margin-bottom:1rem;" />
+
+      <label for="message">Message</label><br />
+      <textarea id="message" name="message" rows="5" placeholder="Your message" style="width:100%; padding:8px; margin-bottom:1rem;"></textarea>
+
+      <button type="submit" style="background-color:#2caefc; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+        Send
+      </button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 The McLeaners Car Detailing</p>
+  </footer>
+</body>
+</html>
