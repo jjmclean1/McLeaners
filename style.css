@@ -76,3 +76,12 @@
   .button:hover {
     background-color: #1b9cd7;
   }
+  nav a i {
+    font-size: 1.5rem;
+  }
+  
+  nav a {
+    display: inline-block;
+    margin: 0 1rem;
+  }
+  
