@@ -2,62 +2,618 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pricing - The McLeaners Car Detailing</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>McLeaners - Pricing Packages</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Bebas+Neue&family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+  <style>
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
+    .hero h2{
+      font-family: "Allan", serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+    .navbar {
+      font-family: "Allan", serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .hero p{
+      font-family: "Allan", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .btn {
+      font-family: "Poppins", sans-serif;
+      font-weight: 200;
+      font-style: normal;
+    }
+
+    .btn:hover {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #67c3ff;
+      padding: 12px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #002a5c;
+      margin: 0;
+    }
+    
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: #002a5c;
+      font-weight: 500;
+    }
+    
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2.05rem;
+      color: #002a5c;
+      cursor: pointer;
+    }
+
+    /* Pricing Section */
+    .pricing {
+      background: linear-gradient(135deg, #67c3ff 0%, #4a90e2 100%);
+      padding: 80px 20px;
+      min-height: 100vh;
+    }
+
+    .pricing-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pricing-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .pricing-title {
+      font-family: "Allan", serif;
+      font-weight: 700;
+      font-size: 3rem;
+      color: white;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px 40px;
+      border-radius: 15px;
+      display: inline-block;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    .pricing-subtitle {
+      font-family: "Allan", serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .package-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .package-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .package-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .stacked-images {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+
+    .stacked-image {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+    }
+
+    .image-only-card {
+      padding: 0;
+    }
+
+    .image-only-card .stacked-images {
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .package-content {
+      padding: 30px;
+    }
+
+    .package-name {
+      font-family: "Allan", serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #002a5c;
+      text-align: center;
+      margin-bottom: 15px;
+      background: #67c3ff;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      margin: -15px -15px 20px -15px;
+    }
+
+    .package-price {
+      font-family: "Allan", serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #4a90e2;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .package-section {
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-family: "Allan", serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #002a5c;
+      margin-bottom: 10px;
+      text-decoration: underline;
+    }
+
+    .service-list {
+      font-family: "Allan", serif;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .add-on-card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .add-on-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .add-on-title {
+      font-family: "Allan", serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #002a5c;
+      margin-bottom: 15px;
+    }
+
+    .add-on-price {
+      font-family: "Allan", serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #4a90e2;
+      margin-bottom: 20px;
+    }
+
+    .add-on-services {
+      font-family: "Allan", serif;
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .book-now-section {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .book-btn {
+      display: inline-block;
+      padding: 20px 50px;
+      background-color: #004aad;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 10px 30px rgba(0, 74, 173, 0.3);
+    }
+
+    .book-btn:hover {
+      background-color: #003b8c;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0, 74, 173, 0.4);
+    }
+
+    /* Footer Styles */
+    .footer {
+      background: linear-gradient(135deg, #67c3ff 0%, #4a90e2 100%);
+      color: white;
+      padding: 30px 20px;
+      font-family: "Allan", serif;
+    }
+    
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .footer-branding {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .footer-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    
+    .footer-logo {
+      background: white;
+      border-radius: 50%;
+      padding: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .logo-circle {
+      width: 60px;
+      height: 60px;
+      background: #4a90e2;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+    
+    .logo-text {
+      font-size: 8px;
+      font-weight: bold;
+      line-height: 1;
+    }
+    
+    .logo-icon {
+      font-size: 12px;
+      margin: 2px 0;
+    }
+    
+    .logo-subtext {
+      font-size: 6px;
+      font-weight: bold;
+      line-height: 1;
+    }
+    
+    .footer-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    
+    .service-locations h3,
+    .contact-info h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+      letter-spacing: 1px;
+    }
+    
+    .service-locations p,
+    .contact-info p {
+      font-size: 0.9rem;
+      font-weight: 400;
+      margin: 0;
+      line-height: 1.4;
+    }
+    
+    .email-section {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .email-label {
+      font-size: 0.9rem;
+      text-decoration: underline;
+    }
+    
+    .phone-number {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      color: #4a90e2;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .social-icon:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .social-icon.instagram:hover {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: white;
+    }
+    
+    .social-icon.facebook:hover {
+      background: #1877f2;
+      color: white;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+      
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #67c3ff;
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+      }
+      
+      .container {
+        position: relative;
+      }
+
+      .pricing-title {
+        font-size: 2rem;
+        padding: 15px 25px;
+      }
+
+      .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .package-card {
+        margin: 0 10px;
+      }
+
+      .add-on-card {
+        margin: 0 10px;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
+      
+      .footer-branding {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .footer-title {
+        font-size: 1.5rem;
+      }
+      
+      .footer-info {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>The McLeaners Car Detailing</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <div class="dropdown">
-        <button class="dropbtn">More <i class="fas fa-caret-down"></i></button>
-        <div class="dropdown-content">
-            <a href="prices.html" style="text-decoration: underline; text-decoration-color: #2caefc;">Prices</a>
-          <a href="contact.html">Contact</a>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">McLeaners</h1>
+      <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav>
+        <ul class="nav-links" id="mobileMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="prices.html">Packages</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="pricing">
+    <div class="pricing-container">
+      <div class="pricing-header">
+        <h1 class="pricing-title">OUR PACKAGES</h1>
+        <p class="pricing-subtitle">
+          Pricing may vary, the prices listed are just an average. We work with each client individually depending on vehicle type, age, and condition.
+        </p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Standard Package -->
+        <div class="package-card">
+          <img src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Standard Package" class="package-image">
+          <div class="package-content">
+            <h2 class="package-name">"STANDARD PACKAGE"</h2>
+            <div class="package-price">$150 - $200</div>
+            
+            <div class="package-section">
+              <h3 class="section-title">Interior:</h3>
+              <p class="service-list">
+                Scrub Down All Surfaces, Blowout, Vacuum, Floor Mats Cleaned, Streak-free Glass, Seat Shampoo and Protect, Optional Fragrance.
+              </p>
+            </div>
+
+            <div class="package-section">
+              <h3 class="section-title">Exterior:</h3>
+              <p class="service-list">
+                Wheel & Tire Clean & Shine, Pre-Treat, Foam Wash, Hand Wash, Spot-Free Rinse, Hand Dry, 6 Month Protective Gloss Sealant.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Gallery Card -->
+        <div class="package-card image-only-card">
+          <div class="stacked-images">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Car detailing service 1" class="stacked-image">
+            <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Car detailing service 2" class="stacked-image">
+          </div>
         </div>
       </div>
-      <a href="https://www.facebook.com/profile.php?id=61576893583908" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://instagram.com/McLeaners" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </nav>
-  </header>
 
-  <section id="pricing" style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
-    <h2>Pricing & Packages</h2>
-
-    <div class="package" style="background:#f9f9f9; padding:1.5rem; border-radius:8px; margin-bottom:2rem; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-      <h3>Maintenance Package (Previous Customer Only)</h3>
-      <ul style="margin: 1rem 0; line-height:1.6;">
-        <li>Exterior Hand Wash</li>
-        <li>Interior Vacuum</li>
-        <li>Window Cleaning</li>
-        <li>Quick Wax</li>
-      </ul>
-      <p><strong>Starting at: $65</strong></p>
-    </div>
-
-    <div class="package" style="background:#f4ede4; padding:1.5rem; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-      <h3>Deluxe Package</h3>
-      <ul style="margin: 1rem 0; line-height:1.6;">
-        <li>Full Exterior Wash & Clay Bar Treatment</li>
-        <li>Interior Deep Clean (Carpets, Seats, Panels)</li>
-        <li>Wax & Sealant Application</li>
-        <li>Engine Bay Cleaning</li>
-        <li>Wheel & Tire Detail</li>
-      </ul>
-      <p><strong>Starting at: $150</strong></p>
+      <div class="book-now-section">
+        <a href="contact.html" class="book-btn">BOOK NOW</a>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 The McLeaners Car Detailing</p>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-branding">
+        <h2 class="footer-title">JAMIN'S PERFECT TOUCH</h2>
+        <div class="footer-logo">
+          <div class="logo-circle">
+            <div class="logo-text">JAMIN'S</div>
+            <div class="logo-icon">🚗</div>
+          </div>
+        </div>
+      </div>
+        <div class="contact-info">
+            <div class="social-icons">
+                <a href="#" class="social-icon instagram" aria-label="Instagram">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </a>
+                <a href="#" class="social-icon facebook" aria-label="Facebook">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+            </div>
+          <h3>CONTACT INFO</h3>
+          <div class="email-section">
+            <p class="email-label">Email Us</p>
+            <p class="phone-number">(513) 647-7874</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
+  
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
