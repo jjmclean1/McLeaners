@@ -132,13 +132,27 @@
   .dropdown:hover .dropbtn {
     color: #2caefc;
   }
+  /* Show desktop nav only on wider screens */
+.desktop-nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .mobile-menu-button {
+    display: none;
+  }
+  
 
 
-  /* Hide mobile elements on desktop */
-.mobile-menu-button,
-#mobileMenu {
-  display: none;
-}
+
+
+
+
+
+
+
+
+
 
 /* Mobile-specific overrides */
 @media (max-width: 768px) {
@@ -168,11 +182,13 @@
       align-items: center;
       padding: 0 1rem;
     }
-  }
+
   .mobile-menu-button i {
     font-size: 1.5rem;  /* smaller than 2rem */
     padding-right: 1rem;
   }
+
+
   /* Hero Section */
 .hero {
     background: url('img_2069.jpeg') no-repeat center center/cover;
@@ -222,3 +238,44 @@
   .hero-button:hover {
     background-color: #001f4d;
   }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4ede4;
+    z-index: 1000;
+    padding-top: 5rem;
+    text-align: center;
+  }
+  
+  .mobile-menu.show {
+    display: block;
+  }
+  
+  .mobile-menu a {
+    display: block;
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: #3c2c24;
+    text-decoration: none;
+  }
+  
+  .mobile-menu a:hover {
+    background-color: #e6dccf;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #3c2c24;
+    cursor: pointer;
+  }
+
+}

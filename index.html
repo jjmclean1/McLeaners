@@ -13,18 +13,23 @@
     <header>
         <h1 class="mobile-title">McLeaners</h1>
         <nav>
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="dropdown desktop-dropdown">
-            <button class="dropbtn">More <i class="fas fa-caret-down"></i></button>
-            <div class="dropdown-content">
-              <a href="prices.html">Prices</a>
-              <a href="contact.html">Contact</a>
+            <!-- Desktop Nav -->
+            <div class="desktop-nav">
+              <a href="index.html" class="nav-link">Home</a>
+              <div class="dropdown desktop-dropdown">
+                <button class="dropbtn">More <i class="fas fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                  <a href="prices.html">Prices</a>
+                  <a href="contact.html">Contact</a>
+                </div>
+              </div>
             </div>
-          </div>
-          <button class="mobile-menu-button" onclick="openMenu()">
-            <i class="fas fa-bars" style="font-weight: 300;"></i>
-          </button>
-        </nav>
+          
+            <!-- Mobile Hamburger Button -->
+            <button class="mobile-menu-button" onclick="openMenu()">
+              <i class="fas fa-bars" style="font-weight: 300;"></i>
+            </button>
+          </nav>
       </header>
       
       <!-- Mobile Fullscreen Menu -->
