@@ -2,78 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The McLeaners Car Detailing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jamin's Perfect Touch</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
 </head>
 <body>
-    <header>
-        <h1 class="mobile-title">McLeaners</h1>
-        <nav>
-            <!-- Desktop Nav -->
-            <div class="desktop-nav">
-              <a href="index.html" class="nav-link">Home</a>
-              <div class="dropdown desktop-dropdown">
-                <button class="dropbtn">More <i class="fas fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                  <a href="prices.html">Prices</a>
-                  <a href="contact.html">Contact</a>
-                </div>
-              </div>
-            </div>
-          
-            <!-- Mobile Hamburger Button -->
-            <button class="mobile-menu-button" onclick="openMenu()">
-              <i class="fas fa-bars" style="font-weight: 300;"></i>
-            </button>
-          </nav>
-      </header>
-      
-      <!-- Mobile Fullscreen Menu -->
-      <div id="mobileMenu" class="mobile-menu">
-        <button class="close-btn" onclick="closeMenu()">&times;</button>
-        <a href="index.html">Home</a>
-        <a href="prices.html">Prices & Packages</a>
-        <a href="contact.html">Contact</a>
-    </div> 
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">JAMIN'S PERFECT TOUCH</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Packages</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    
-        
-      
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We offer premium car detailing services that leave your vehicle looking brand new — inside and out.</p>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>PERFECT MOBILE AUTO DETAILING SERVICES IN CINCINNATI, OH</h2>
+      <p>
+        Welcome to Jamin’s Perfect Touch, where we bring top-tier mobile auto detailing services directly to your doorstep. In Cincinnati, OH, our team of professionals is dedicated to restoring the beauty and cleanliness of your vehicle, providing convenience and expert care that meets your highest expectations.
+      </p>
+      <a class="btn" href="#">CONTACT US</a>
+    </div>
   </section>
-
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Exterior Wash & Wax</li>
-      <li>Interior Deep Clean</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: themcleaners@gmail.com</p>
-    <p>Phone: (704) 692-9733</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 The McLeaners Car Detailing</p>
-  </footer>
-  <script>
-    function openMenu() {
-      document.getElementById('mobileMenu').classList.add('show');
-    }
-  
-    function closeMenu() {
-      document.getElementById('mobileMenu').classList.remove('show');
-    }
-  </script>
 </body>
 </html>

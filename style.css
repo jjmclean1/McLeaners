@@ -1,281 +1,85 @@
-/* Reset & base */
-* {
-    box-sizing: border-box;
+/* style.css */
+
+body, html {
     margin: 0;
     padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #ffffff;
+    color: #1c1c1c;
   }
   
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4ede4; /* Soft beige */
-    color: #3c2c24; /* Rich brown for text */
-    line-height: 1.6;
+  .navbar {
+    background-color: #67c3ff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
   
-  /* Header & Nav */
-  header {
-    background-color: #3c2c24; /* Espresso brown */
-    color: #ffffff;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  
-  nav {
-    margin-top: 1rem;
+  .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
-  nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 1rem;
+  .logo {
+    font-size: 1.5rem;
     font-weight: bold;
+    color: #002a5c;
+    margin: 0;
   }
   
-  nav a:hover {
-    color: #2caefc; /* Blue accent */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
   }
   
-  /* Sections */
-  section {
-    padding: 3rem 1.5rem;
+  .nav-links a {
+    text-decoration: none;
+    color: #002a5c;
+    font-weight: 500;
+  }
+  
+  .hero {
+    background: url('your-car-image.jpg') center/cover no-repeat;
+    color: white;
+    padding: 80px 20px;
+    text-align: left;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 70, 130, 0.6);
+  }
+  
+  .hero-content {
     max-width: 800px;
     margin: auto;
   }
   
-  h2 {
-    color: #3c2c24;
-    margin-bottom: 1rem;
-  }
-  
-  ul li {
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #3c2c24;
-    color: #ffffff;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 2rem;
-  }
-  
-  /* Buttons or Callouts (optional) */
-  .button {
-    background-color: #2caefc;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 1rem;
-  }
-  
-  .button:hover {
-    background-color: #1b9cd7;
-  }
-  nav a i {
-    font-size: 2.0rem;
-  }
-  
-  nav a {
-    display: inline-block;
-    margin: 0 1rem;
-  }
-  
-  header {
-    position: relative; /* Needed for absolutely positioned suds */
-  }
-  
-  /* Dropdown Styles */
-.dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropbtn {
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f4ede4;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: #3c2c24;
-    padding: 0.75rem 1rem;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #e6dccf;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    color: #2caefc;
-  }
-  /* Show desktop nav only on wider screens */
-.desktop-nav {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .mobile-menu-button {
-    display: none;
-  }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-/* Mobile-specific overrides */
-@media (max-width: 768px) {
-    header {
-        text-align: left;
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between; /* title on left, icon on right */
-      }
-  
-    .desktop-title {
-      display: none;
-    }
-  
-    .mobile-title {
-        display: block;
-        font-size: 1.25rem;  /* smaller size */
-        font-weight: 700;
-        margin: 0;
-        padding-left: 1rem;
-        color: #003366; /* optional: match blue from screenshot */
-      }
-  
-    nav {
-      justify-content: flex-end;
-      align-items: center;
-      padding: 0 1rem;
-    }
-
-  .mobile-menu-button i {
-    font-size: 1.5rem;  /* smaller than 2rem */
-    padding-right: 1rem;
-  }
-
-
-  /* Hero Section */
-.hero {
-    background: url('img_2069.jpeg') no-repeat center center/cover;
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem 1.5rem;
-    color: white;
-  }
-  
-  .hero-overlay {
-    background-color: rgba(0, 123, 199, 0.85); /* Light blue overlay */
-    padding: 2rem 1.5rem;
-    border-radius: 10px;
-    max-width: 600px;
-  }
-  
-  .hero h1 {
-    font-size: 2rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+  .hero h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
   }
   
   .hero p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    font-weight: 400;
-    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #e5f6ff;
   }
   
-  .hero-button {
-    background-color: #003366;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 50px;
+  .btn {
     display: inline-block;
-    font-size: 1rem;
-  }
-  
-  .hero-button:hover {
-    background-color: #001f4d;
-  }
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f4ede4;
-    z-index: 1000;
-    padding-top: 5rem;
-    text-align: center;
-  }
-  
-  .mobile-menu.show {
-    display: block;
-  }
-  
-  .mobile-menu a {
-    display: block;
-    padding: 1rem;
-    font-size: 1.25rem;
-    color: #3c2c24;
+    padding: 15px 30px;
+    background-color: #004aad;
+    color: white;
+    font-weight: bold;
     text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s ease;
   }
   
-  .mobile-menu a:hover {
-    background-color: #e6dccf;
+  .btn:hover {
+    background-color: #003b8c;
   }
-  
-  .close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #3c2c24;
-    cursor: pointer;
-  }
-
-}
