@@ -5,23 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>McLeaners</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Bebas+Neue&family=Poppins:wght@200;400&display=swap" rel="stylesheet">
   <style>
     /* Reset styles */
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Helvetica Neue', sans-serif;
+    .hero h2{
+  font-family: "Allan", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.navbar {
+  font-family: "Allan", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.hero p{
+  font-family: "Allan", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.btn:hover {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* About Section */
+.about {
+      padding: 80px 20px;
+      background-color: #f8f9fa;
     }
     
-    /* Reset styles */
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Helvetica Neue', sans-serif;
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
     }
     
+    .about-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .about-content h2 {
+        font-family: "Allan", serif;
+    font-weight: 700;
+    font-style: normal;
+      color: #002a5c;
+      margin-bottom: 30px;
+      line-height: 1.1;
+    }
+    
+    .about-content p {
+    font-family: "Allan", serif;
+  font-weight: 400;
+  font-style: normal;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+
     /* Navbar */
     .navbar {
       background-color: #67c3ff;
@@ -193,6 +251,22 @@
       .logo {
         font-size: 1.3rem;
       }
+      .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: left;
+      }
+      
+      .about-content h2 {
+        font-size: 2.5rem;
+        text-align: left;
+      }
+      
+      .about-content p {
+        font-size: 1rem;
+      }
+
+
     }
     
     /* Extra small mobile devices */
@@ -245,6 +319,24 @@
         Welcome to McLeaners, where we bring top-tier mobile auto detailing services directly to your doorstep. In Lenoir, NC, our team of professionals is dedicated to restoring the beauty and cleanliness of your vehicle, providing convenience and expert care that meets your highest expectations.
       </p>
       <a class="btn" href="#">CONTACT US</a>
+    
+    </div>
+  </section>
+  <section class="about">
+    <div class="about-container">
+      <img src="https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Clean white SUV" class="about-image">
+      <div class="about-content">
+        <h2>DRIVEN BY EXCELLENCE, PASSIONATE ABOUT VEHICLE'S CARE</h2>
+        <p>
+          Welcome to Jamin's Perfect Touch, one of the best mobile auto detailing companies in Cincinnati. Where your vehicle receives more than just meticulous care-it receives the personal touch of someone who understands the value of compassion and integrity.
+        </p>
+        <p>
+          My journey to creating this company has been shaped by a diverse career in customer service, cleaning services, and leadership roles from substitute teaching to managing restaurants. As an adopted Asian-American who faced adversity in childhood, these experiences have shaped me into who I am.
+        </p>
+        <p>
+          My commitment to integrity extends to every aspect of my business. My personal goal is to infuse every interaction and service with positivity and dedication. At Jamin's Perfect Touch, we strive to offer exceptional and affordable car detailing services. I am dedicated to being more than just a service provider.
+        </p>
+      </div>
     </div>
   </section>
   
