@@ -166,3 +166,52 @@
   .mobile-menu-button i {
     font-size: 2rem; /* Bigger hamburger icon */
   }
+  /* Hero Section */
+.hero {
+    background: url('img_2069.jpeg') no-repeat center center/cover;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    color: white;
+  }
+  
+  .hero-overlay {
+    background-color: rgba(0, 123, 199, 0.85); /* Light blue overlay */
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    max-width: 600px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  
+  .hero-button {
+    background-color: #003366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    display: inline-block;
+    font-size: 1rem;
+  }
+  
+  .hero-button:hover {
+    background-color: #001f4d;
+  }
