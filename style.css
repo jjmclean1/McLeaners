@@ -143,19 +143,25 @@
 /* Mobile-specific overrides */
 @media (max-width: 768px) {
     header {
-      text-align: left;
-      padding: 1rem;
-    }
+        text-align: left;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* title on left, icon on right */
+      }
   
     .desktop-title {
       display: none;
     }
   
     .mobile-title {
-      display: block;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
+        display: block;
+        font-size: 1.25rem;  /* smaller size */
+        font-weight: 700;
+        margin: 0;
+        padding-left: 1rem;
+        color: #003366; /* optional: match blue from screenshot */
+      }
   
     nav {
       justify-content: flex-end;
@@ -164,7 +170,8 @@
     }
   }
   .mobile-menu-button i {
-    font-size: 2rem; /* Bigger hamburger icon */
+    font-size: 1.5rem;  /* smaller than 2rem */
+    padding-right: 1rem;
   }
   /* Hero Section */
 .hero {
