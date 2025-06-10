@@ -170,6 +170,10 @@
       background-color: #003b8c;
     }
     
+
+
+
+
     /* Mobile Styles - Only apply to screens 768px and below */
     @media (max-width: 768px) {
       /* Mobile Navigation */
@@ -266,7 +270,6 @@
         font-size: 1rem;
       }
 
-
     }
     
     /* Extra small mobile devices */
@@ -293,6 +296,147 @@
         font-size: 0.9rem;
       }
     }
+        /* Photo Gallery Section */
+        .gallery {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #67c3ff 0%, #4a90e2 100%);
+    }
+    
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .gallery h2 {
+      font-family: "Allan", serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    
+    .main-image-container {
+      position: relative;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+    
+    .main-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+      color: white;
+      padding: 30px 20px 20px;
+      font-family: "Allan", serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+    
+    .thumbnail-row {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 10px 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .thumbnail {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      flex-shrink: 0;
+    }
+    
+    .thumbnail:hover {
+      transform: scale(1.1);
+      border-color: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .thumbnail.active {
+      border-color: white;
+      transform: scale(1.05);
+    }
+    
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: #002a5c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .nav-arrow:hover {
+      background: white;
+      transform: translateY(-50%) scale(1.1);
+    }
+    
+    .nav-arrow.prev {
+      left: 20px;
+    }
+    
+    .nav-arrow.next {
+      right: 20px;
+    }
+    
+    @media (max-width: 768px) {
+      .gallery h2 {
+        font-size: 2.5rem;
+      }
+      
+      .main-image {
+        height: 250px;
+      }
+      
+      .thumbnail-row {
+        justify-content: flex-start;
+      }
+      
+      .nav-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+      
+      .nav-arrow.prev {
+        left: 10px;
+      }
+      
+      .nav-arrow.next {
+        right: 10px;
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -339,10 +483,113 @@
       </div>
     </div>
   </section>
+
+
+  <section class="gallery">
+    <div class="gallery-container">
+      <h2>Photo Gallery</h2>
+      <div class="main-image-container">
+        <img id="mainImage" src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Car detailing work" class="main-image">
+        <div class="image-caption" id="imageCaption">Professional Auto Detailing</div>
+        <button class="nav-arrow prev" onclick="previousImage()">‹</button>
+        <button class="nav-arrow next" onclick="nextImage()">›</button>
+      </div>
+      <div class="thumbnail-row">
+        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Car detailing" class="thumbnail active" onclick="changeImage(0)">
+        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Blue sports car" class="thumbnail" onclick="changeImage(1)">
+        <img src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Car interior cleaning" class="thumbnail" onclick="changeImage(2)">
+        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Engine bay cleaning" class="thumbnail" onclick="changeImage(3)">
+        <img src="https://images.unsplash.com/photo-1621135802920-133df287f89c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Wheel detailing" class="thumbnail" onclick="changeImage(4)">
+        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Car washing" class="thumbnail" onclick="changeImage(5)">
+        <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Luxury car detail" class="thumbnail" onclick="changeImage(6)">
+        <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Clean car exterior" class="thumbnail" onclick="changeImage(7)">
+        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Professional cleaning" class="thumbnail" onclick="changeImage(8)">
+        <img src="https://images.unsplash.com/photo-1551816230-ef5deaed4a26?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Truck detailing" class="thumbnail" onclick="changeImage(9)">
+      </div>
+    </div>
+  </section>
   
   <script>
     function toggleMenu() {
       document.getElementById('mobileMenu').classList.toggle('active');
+    }
+    const images = [
+      {
+        src: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        caption: "Professional Auto Detailing"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        caption: "Premium Sports Car Care"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        caption: "Interior Deep Cleaning"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        caption: "Engine Bay Detailing"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1621135802920-133df287f89c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        caption: "Wheel & Tire Restoration"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        caption: "Thorough Exterior Wash"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1607853202273-797f1c22a38e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        caption: "Luxury Vehicle Care"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        caption: "Paint Protection & Shine"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1563720223185-11003d516935?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        caption: "Professional Service"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        caption: "Commercial Vehicle Detailing"
+      }
+    ];
+
+    let currentImageIndex = 0;
+
+    function changeImage(index) {
+      currentImageIndex = index;
+      updateImage();
+      updateThumbnails();
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      updateImage();
+      updateThumbnails();
+    }
+
+    function previousImage() {
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      updateImage();
+      updateThumbnails();
+    }
+
+    function updateImage() {
+      const mainImage = document.getElementById('mainImage');
+      const caption = document.getElementById('imageCaption');
+      
+      mainImage.src = images[currentImageIndex].src;
+      mainImage.alt = images[currentImageIndex].caption;
+      caption.textContent = images[currentImageIndex].caption;
+    }
+
+    function updateThumbnails() {
+      const thumbnails = document.querySelectorAll('.thumbnail');
+      thumbnails.forEach((thumb, index) => {
+        thumb.classList.toggle('active', index === currentImageIndex);
+      });
     }
   </script>
 </body>
